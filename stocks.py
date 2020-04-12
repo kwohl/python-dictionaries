@@ -13,12 +13,13 @@ purchases = [
 
 
 
-# for stock_tuple in purchases:
-#     if stock_tuple[0] in stockDict.keys():
-#         stock_name = stockDict[stock_tuple[0]]
-#         full_purchase_price = stock_tuple[1]*stock_tuple[3]
-#     print(f"I purchased {stock_name} stock for ${full_purchase_price}.")
+for stock_tuple in purchases:
+    if stock_tuple[0] in stockDict.keys():
+        stock_name = stockDict[stock_tuple[0]]
+        full_purchase_price = stock_tuple[1]*stock_tuple[3]
+    print(f"I purchased {stock_name} stock for ${full_purchase_price}.")
 
+print()
 purchaseDict = dict()
 
 for purchase in purchases:
@@ -33,5 +34,7 @@ for (stock, total) in purchaseDict.items():
     for purchase in purchases:
         if purchase[0] == stock:
             print(f"{purchase[1]} shares at {purchase[3]} dollars each on {purchase[2]}")
+    print()
     print(f"Total value of stock in portfolio: ${total}")
+    print()
 
